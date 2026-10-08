@@ -1,0 +1,481 @@
+option casemap:none
+.code
+extern mProcs:QWORD
+extern EnsureForwarders:PROC
+f0 proc
+ mov r11d,0
+ jmp ForwardDispatch
+f0 endp
+f1 proc
+ mov r11d,1
+ jmp ForwardDispatch
+f1 endp
+f2 proc
+ mov r11d,2
+ jmp ForwardDispatch
+f2 endp
+f3 proc
+ mov r11d,3
+ jmp ForwardDispatch
+f3 endp
+f4 proc
+ mov r11d,4
+ jmp ForwardDispatch
+f4 endp
+f5 proc
+ mov r11d,5
+ jmp ForwardDispatch
+f5 endp
+f6 proc
+ mov r11d,6
+ jmp ForwardDispatch
+f6 endp
+f7 proc
+ mov r11d,7
+ jmp ForwardDispatch
+f7 endp
+f8 proc
+ mov r11d,8
+ jmp ForwardDispatch
+f8 endp
+f9 proc
+ mov r11d,9
+ jmp ForwardDispatch
+f9 endp
+f10 proc
+ mov r11d,10
+ jmp ForwardDispatch
+f10 endp
+f11 proc
+ mov r11d,11
+ jmp ForwardDispatch
+f11 endp
+f12 proc
+ mov r11d,12
+ jmp ForwardDispatch
+f12 endp
+f13 proc
+ mov r11d,13
+ jmp ForwardDispatch
+f13 endp
+f14 proc
+ mov r11d,14
+ jmp ForwardDispatch
+f14 endp
+f15 proc
+ mov r11d,15
+ jmp ForwardDispatch
+f15 endp
+f16 proc
+ mov r11d,16
+ jmp ForwardDispatch
+f16 endp
+f17 proc
+ mov r11d,17
+ jmp ForwardDispatch
+f17 endp
+f18 proc
+ mov r11d,18
+ jmp ForwardDispatch
+f18 endp
+f19 proc
+ mov r11d,19
+ jmp ForwardDispatch
+f19 endp
+f20 proc
+ mov r11d,20
+ jmp ForwardDispatch
+f20 endp
+f21 proc
+ mov r11d,21
+ jmp ForwardDispatch
+f21 endp
+f22 proc
+ mov r11d,22
+ jmp ForwardDispatch
+f22 endp
+f23 proc
+ mov r11d,23
+ jmp ForwardDispatch
+f23 endp
+f24 proc
+ mov r11d,24
+ jmp ForwardDispatch
+f24 endp
+f25 proc
+ mov r11d,25
+ jmp ForwardDispatch
+f25 endp
+f26 proc
+ mov r11d,26
+ jmp ForwardDispatch
+f26 endp
+f27 proc
+ mov r11d,27
+ jmp ForwardDispatch
+f27 endp
+f28 proc
+ mov r11d,28
+ jmp ForwardDispatch
+f28 endp
+f29 proc
+ mov r11d,29
+ jmp ForwardDispatch
+f29 endp
+f30 proc
+ mov r11d,30
+ jmp ForwardDispatch
+f30 endp
+f31 proc
+ mov r11d,31
+ jmp ForwardDispatch
+f31 endp
+f32 proc
+ mov r11d,32
+ jmp ForwardDispatch
+f32 endp
+f33 proc
+ mov r11d,33
+ jmp ForwardDispatch
+f33 endp
+f34 proc
+ mov r11d,34
+ jmp ForwardDispatch
+f34 endp
+f35 proc
+ mov r11d,35
+ jmp ForwardDispatch
+f35 endp
+f36 proc
+ mov r11d,36
+ jmp ForwardDispatch
+f36 endp
+f37 proc
+ mov r11d,37
+ jmp ForwardDispatch
+f37 endp
+f38 proc
+ mov r11d,38
+ jmp ForwardDispatch
+f38 endp
+f39 proc
+ mov r11d,39
+ jmp ForwardDispatch
+f39 endp
+f40 proc
+ mov r11d,40
+ jmp ForwardDispatch
+f40 endp
+f41 proc
+ mov r11d,41
+ jmp ForwardDispatch
+f41 endp
+f42 proc
+ mov r11d,42
+ jmp ForwardDispatch
+f42 endp
+f43 proc
+ mov r11d,43
+ jmp ForwardDispatch
+f43 endp
+f44 proc
+ mov r11d,44
+ jmp ForwardDispatch
+f44 endp
+f45 proc
+ mov r11d,45
+ jmp ForwardDispatch
+f45 endp
+f46 proc
+ mov r11d,46
+ jmp ForwardDispatch
+f46 endp
+f47 proc
+ mov r11d,47
+ jmp ForwardDispatch
+f47 endp
+f48 proc
+ mov r11d,48
+ jmp ForwardDispatch
+f48 endp
+f49 proc
+ mov r11d,49
+ jmp ForwardDispatch
+f49 endp
+f50 proc
+ mov r11d,50
+ jmp ForwardDispatch
+f50 endp
+f51 proc
+ mov r11d,51
+ jmp ForwardDispatch
+f51 endp
+f52 proc
+ mov r11d,52
+ jmp ForwardDispatch
+f52 endp
+f53 proc
+ mov r11d,53
+ jmp ForwardDispatch
+f53 endp
+f54 proc
+ mov r11d,54
+ jmp ForwardDispatch
+f54 endp
+f55 proc
+ mov r11d,55
+ jmp ForwardDispatch
+f55 endp
+f56 proc
+ mov r11d,56
+ jmp ForwardDispatch
+f56 endp
+f57 proc
+ mov r11d,57
+ jmp ForwardDispatch
+f57 endp
+f58 proc
+ mov r11d,58
+ jmp ForwardDispatch
+f58 endp
+f59 proc
+ mov r11d,59
+ jmp ForwardDispatch
+f59 endp
+f60 proc
+ mov r11d,60
+ jmp ForwardDispatch
+f60 endp
+f61 proc
+ mov r11d,61
+ jmp ForwardDispatch
+f61 endp
+f62 proc
+ mov r11d,62
+ jmp ForwardDispatch
+f62 endp
+f63 proc
+ mov r11d,63
+ jmp ForwardDispatch
+f63 endp
+f64 proc
+ mov r11d,64
+ jmp ForwardDispatch
+f64 endp
+f65 proc
+ mov r11d,65
+ jmp ForwardDispatch
+f65 endp
+f66 proc
+ mov r11d,66
+ jmp ForwardDispatch
+f66 endp
+f67 proc
+ mov r11d,67
+ jmp ForwardDispatch
+f67 endp
+f68 proc
+ mov r11d,68
+ jmp ForwardDispatch
+f68 endp
+f69 proc
+ mov r11d,69
+ jmp ForwardDispatch
+f69 endp
+f70 proc
+ mov r11d,70
+ jmp ForwardDispatch
+f70 endp
+f71 proc
+ mov r11d,71
+ jmp ForwardDispatch
+f71 endp
+f72 proc
+ mov r11d,72
+ jmp ForwardDispatch
+f72 endp
+f73 proc
+ mov r11d,73
+ jmp ForwardDispatch
+f73 endp
+f74 proc
+ mov r11d,74
+ jmp ForwardDispatch
+f74 endp
+f75 proc
+ mov r11d,75
+ jmp ForwardDispatch
+f75 endp
+f76 proc
+ mov r11d,76
+ jmp ForwardDispatch
+f76 endp
+f77 proc
+ mov r11d,77
+ jmp ForwardDispatch
+f77 endp
+f78 proc
+ mov r11d,78
+ jmp ForwardDispatch
+f78 endp
+f79 proc
+ mov r11d,79
+ jmp ForwardDispatch
+f79 endp
+f80 proc
+ mov r11d,80
+ jmp ForwardDispatch
+f80 endp
+f81 proc
+ mov r11d,81
+ jmp ForwardDispatch
+f81 endp
+f82 proc
+ mov r11d,82
+ jmp ForwardDispatch
+f82 endp
+f83 proc
+ mov r11d,83
+ jmp ForwardDispatch
+f83 endp
+f84 proc
+ mov r11d,84
+ jmp ForwardDispatch
+f84 endp
+f85 proc
+ mov r11d,85
+ jmp ForwardDispatch
+f85 endp
+f86 proc
+ mov r11d,86
+ jmp ForwardDispatch
+f86 endp
+f87 proc
+ mov r11d,87
+ jmp ForwardDispatch
+f87 endp
+f88 proc
+ mov r11d,88
+ jmp ForwardDispatch
+f88 endp
+f89 proc
+ mov r11d,89
+ jmp ForwardDispatch
+f89 endp
+f90 proc
+ mov r11d,90
+ jmp ForwardDispatch
+f90 endp
+f91 proc
+ mov r11d,91
+ jmp ForwardDispatch
+f91 endp
+f92 proc
+ mov r11d,92
+ jmp ForwardDispatch
+f92 endp
+f93 proc
+ mov r11d,93
+ jmp ForwardDispatch
+f93 endp
+f94 proc
+ mov r11d,94
+ jmp ForwardDispatch
+f94 endp
+f95 proc
+ mov r11d,95
+ jmp ForwardDispatch
+f95 endp
+f96 proc
+ mov r11d,96
+ jmp ForwardDispatch
+f96 endp
+f97 proc
+ mov r11d,97
+ jmp ForwardDispatch
+f97 endp
+f98 proc
+ mov r11d,98
+ jmp ForwardDispatch
+f98 endp
+f99 proc
+ mov r11d,99
+ jmp ForwardDispatch
+f99 endp
+f100 proc
+ mov r11d,100
+ jmp ForwardDispatch
+f100 endp
+f101 proc
+ mov r11d,101
+ jmp ForwardDispatch
+f101 endp
+f102 proc
+ mov r11d,102
+ jmp ForwardDispatch
+f102 endp
+f103 proc
+ mov r11d,103
+ jmp ForwardDispatch
+f103 endp
+f104 proc
+ mov r11d,104
+ jmp ForwardDispatch
+f104 endp
+f105 proc
+ mov r11d,105
+ jmp ForwardDispatch
+f105 endp
+f106 proc
+ mov r11d,106
+ jmp ForwardDispatch
+f106 endp
+f107 proc
+ mov r11d,107
+ jmp ForwardDispatch
+f107 endp
+f108 proc
+ mov r11d,108
+ jmp ForwardDispatch
+f108 endp
+f109 proc
+ mov r11d,109
+ jmp ForwardDispatch
+f109 endp
+f110 proc
+ mov r11d,110
+ jmp ForwardDispatch
+f110 endp
+f111 proc
+ mov r11d,111
+ jmp ForwardDispatch
+f111 endp
+ForwardDispatch proc frame
+ sub rsp,0A8h
+ .allocstack 0A8h
+ .endprolog
+ mov [rsp+20h],rcx
+ mov [rsp+28h],rdx
+ mov [rsp+30h],r8
+ mov [rsp+38h],r9
+ mov [rsp+40h],r11
+ movdqu [rsp+50h],xmm0
+ movdqu [rsp+60h],xmm1
+ movdqu [rsp+70h],xmm2
+ movdqu [rsp+80h],xmm3
+ call EnsureForwarders
+ mov r11,[rsp+40h]
+ lea rax,mProcs
+ mov rax,[rax+r11*8]
+ mov rcx,[rsp+20h]
+ mov rdx,[rsp+28h]
+ mov r8,[rsp+30h]
+ mov r9,[rsp+38h]
+ movdqu xmm0,[rsp+50h]
+ movdqu xmm1,[rsp+60h]
+ movdqu xmm2,[rsp+70h]
+ movdqu xmm3,[rsp+80h]
+ add rsp,0A8h
+ jmp rax
+ForwardDispatch endp
+end
